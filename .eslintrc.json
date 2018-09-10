@@ -1,0 +1,11 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "linebreak-style": "off",
+    "no-console": "off",
+    "react/jsx-filename-extension": "off",
+    "react/prefer-stateless-function": "off",
+    "react/no-array-index-key": "off",
+    "no-underscore-dangle": "off"
+  }
+}
