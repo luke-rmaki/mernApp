@@ -7,7 +7,7 @@
     "client": "webpack-dev-server --mode development --open --hot",
     "client:build": "webpack --mode production",
     "server": "nodemon --exec npm run babel-node -- server/server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "server:build": "babel --presets=@babel/env server -d build/server",
     "prebuild": "rm -rf build",
     "build": "npm run client:build && npm run server:build && npm run build-package",
