@@ -36,11 +36,10 @@ Before deploying there are a few changes you need to make. Up to now, the app ha
 
 1. Sign up for a Heroku account
 2. Download the [Heroku cli](https://devcenter.heroku.com/articles/heroku-cli)
-3. Navigate to root folder for you app in your terminal
-4. Run `git init` if you haven't already
+3. Navigate to the root of the build
+4. Run `git init`
 5. Commit all changes
 6. Run `heroku login` and enter your account information
-7. Run `heroku create` (make sure you are in the root directory of your project). This creates a new app
-8. Run `heroku git:remote -a your-apps-name`. This adds **heroku** as a new remote for git.
-9. Run `git push heroku master`. If all goes well, this will deploy your app
-10. To make any changes, commit the changes to the **master** branch and push to **heroku**
+7. Run `heroku create` (make sure you are in the root directory of your project's build). This creates a new app
+8. Run `git push heroku master`. If all goes well, this will deploy your app
+9. To make any changes, commit the changes to the **master** branch and push to **heroku**
