@@ -23,11 +23,12 @@ The React front-end was built from scratch without **create-react-app** to allow
 Run `npm start` to start the Express and Webpack(front-end) servers. The Express server runs on port 5000 by default and the Webpack-Dev-Server on 8080. If you need to change the Express server's port, remember to update the port number in App.js.
 Here's a list of the different NPM scripts:
 
-1. `npm run dev`: Starts the servers for development
-2. `npm run client`: Starts the Webpack-Dev-Server for the client
-3. `npm run client:build`: Creates a build for the client
-4. `npm start`: Starts the Express server
-5. `npm run server`: Starts the Express server with Nodemon
+1. `npm start`: Starts the servers for development
+2. `npm run build`: Creates a build
+3. `npm run client`: Starts the Webpack-Dev-Server for the client
+4. `npm run client:build`: Creates a build for the client
+5. `npm run server`: Starts the Express server
+6. `npm run server:build`: Creates a build for the server
 
 ## Build (Heroku)
 
