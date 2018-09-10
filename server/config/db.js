@@ -1,5 +1,5 @@
 const dbInfo = {
-  mongoURI: 'mongodb://test_admin:smaki5853@ds141185.mlab.com:41185/scaevius_test',
+  mongoURI: 'mongodb://db_user:db_password@db_host/bd_name',
 };
 
 export default dbInfo;
