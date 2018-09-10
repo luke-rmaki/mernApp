@@ -6,10 +6,14 @@
   "scripts": {
     "client": "webpack-dev-server --mode development --open --hot",
     "client:build": "webpack --mode production",
-    "babel-node": "babel-node --presets=@babel/env",
     "server": "nodemon --exec npm run babel-node -- server/server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server:build": "babel --presets=@babel/env server -d build/server",
-    "build": "npm run client:build && npm run server:build"
+    "prebuild": "rm -rf build",
+    "build": "npm run client:build && npm run server:build && npm run build-package",
+    "postbuild": "rm build/server/config/createPackage.js",
+    "babel-node": "babel-node --presets=@babel/env",
+    "build-package": "cd build/server/config && node createPackage"
   },
   "author": "luke ruokaismaki",
   "license": "ISC",

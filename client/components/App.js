@@ -8,7 +8,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("/api") //eslint-disable-line
+    fetch("http://localhost:5000/api") //eslint-disable-line
       .then(res => res.json())
       .then((data) => {
         this.setState({
@@ -25,7 +25,7 @@ class App extends Component {
     const { value } = current;
     const newData = { data: value };
     this.inputRef.current.value = '';
-    fetch("/api", { // eslint-disable-line
+    fetch("http://localhost:5000/api", { // eslint-disable-line
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ class App extends Component {
 
   deleteItem(id) {
     const itemData = { itemID: id };
-    fetch("/api", { // eslint-disable-line
+    fetch("http://localhost:5000/api", { // eslint-disable-line
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
