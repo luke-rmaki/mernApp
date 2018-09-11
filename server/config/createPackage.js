@@ -5,7 +5,7 @@ const data = `
   "name": "mernapp",
   "version": "1.0.0",
   "description": "A template for MERN apps",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
     "start": "node server/server"
   },

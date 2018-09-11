@@ -2,7 +2,7 @@ const path = require('path');
 const HTMLPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './client/index.js',
+  entry: './client/js/index.js',
   output: {
     path: path.join(__dirname, '/build/client'),
     filename: 'bundle.js',
@@ -17,18 +17,26 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        use: ['url-loader?limit=10000', 'img-loader'],
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              disable: true,
+            },
+          },
+        ],
       },
     ],
   },
   plugins: [
     new HTMLPlugin({
-      template: './client/index.html',
+      template: './client/html/index.html',
     }),
   ],
   stats: 'errors-only',
