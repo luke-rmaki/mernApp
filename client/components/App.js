@@ -80,8 +80,8 @@ class App extends Component {
               </li>
             ))
           ) : (
-              <p>Loading data.....</p>
-            )}
+            <p>Loading data.....</p>
+          )}
         </ul>
       </div>
     );
