@@ -16,7 +16,7 @@ Just replace the dummy model in the models folder with your own models.
 
 ### Client
 
-The React front-end was built from scratch without **create-react-app** to allow for more freedom extending Webpack. I also have run into problems trying to get ESLint to work with **create-react-app**.
+The React front-end was built from scratch without **create-react-app**.
 
 ## Developing
 
